@@ -1,0 +1,1 @@
+(()=>{const s={triggerEvent(i,n,e){e&&(n.value=e);const t=new CustomEvent(i,{detail:{value:e}});n.dispatchEvent(t)}};window.addEventListener("message",i=>{const{type:n,BTN_EL:e}=i.data;if(n==="submit"){const t=document.querySelector(e);if(/form/i.test(t.nodeName)){t.submit();return}s.triggerEvent("click",t),t.click()}})})();
